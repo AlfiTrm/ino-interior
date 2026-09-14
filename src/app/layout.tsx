@@ -1,12 +1,15 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Manrope } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' })
 
 export const metadata: Metadata = {
-  title: 'Next.js Feature-Based App',
-  description: 'Created with the Next.js feature-based structure',
+  title: {
+    default: 'INO Interior — Ruang yang bekerja sebaik tampilnya',
+    template: '%s — INO Interior',
+  },
+  description: 'Studio interior untuk ruang komersial, hospitality, dan residensial.',
 }
 
 export default function RootLayout({
@@ -15,8 +18,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="id">
+      <body className={manrope.variable}>
+        <a href="#content" className="sr-only focus:not-sr-only focus:fixed focus:left-5 focus:top-5 focus:z-50 focus:bg-white focus:px-4 focus:py-3 focus:text-[var(--ink)]">
+          Langsung ke konten
+        </a>
+        {children}
+      </body>
     </html>
   )
 }
