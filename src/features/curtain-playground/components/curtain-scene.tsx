@@ -18,13 +18,16 @@ type CurtainType = (typeof types)[number];
 type Finish = keyof typeof finishes;
 
 function FabricMaterial({ finish }: { finish: Finish }) {
-  const texture = useLoader(THREE.TextureLoader, '/assets/textures/linen-weave.png');
-
-  useEffect(() => {
-    texture.colorSpace = THREE.SRGBColorSpace;
-    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.set(1, 2);
-  }, [texture]);
+  const source = useLoader(THREE.TextureLoader, '/assets/textures/linen-weave.png');
+  const texture = useMemo(() => {
+    const copy = source.clone();
+    copy.colorSpace = THREE.SRGBColorSpace;
+    copy.wrapS = copy.wrapT = THREE.RepeatWrapping;
+    copy.repeat.set(1, 2);
+    copy.needsUpdate = true;
+    return copy;
+  }, [source]);
+  useEffect(() => () => texture.dispose(), [texture]);
 
   const item = finishes[finish];
   return <meshStandardMaterial color={finish === 'linen' ? '#f3eee6' : item.color} map={finish === 'wood' ? null : texture} bumpMap={finish === 'wood' ? null : texture} bumpScale={finish === 'linen' ? 0.012 : 0.006} roughness={item.roughness} metalness={item.metalness} side={THREE.DoubleSide} />;
@@ -105,16 +108,105 @@ export function CurtainScene() {
   const [finish, setFinish] = useState<Finish>('linen');
   const [openness, setOpenness] = useState(0.35);
 
-  return <div className="overflow-hidden bg-[#e8e2d7]">
-    <div className="h-[62svh] min-h-[430px]">
-      <Canvas shadows dpr={[1, 1.5]} camera={camera}>
-        <Room type={type} finish={finish} openness={openness} />
-      </Canvas>
+  return (
+    <div className="grid gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(19rem,.75fr)] lg:gap-12">
+      <section aria-label="Pratinjau ruang" className="min-w-0">
+        <div className="flex flex-wrap items-end justify-between gap-x-4 gap-y-2 border-b border-[var(--line)] py-4">
+          <h2 className="text-base font-medium tracking-[-.025em]">Pratinjau ruang</h2>
+          <p className="text-xs text-[var(--muted)]">{type} <span aria-hidden="true">/</span> {finishes[finish].label}</p>
+        </div>
+        <div className="overflow-hidden border border-[var(--line)] bg-[#e8e2d7]">
+          <div className="h-[62svh] min-h-[390px] max-h-[640px] sm:min-h-[460px]">
+            <Canvas shadows dpr={[1, 1.5]} camera={camera}>
+              <Room type={type} finish={finish} openness={openness} />
+            </Canvas>
+          </div>
+          <p className="border-t border-black/10 px-4 py-3 text-xs leading-5 text-[var(--muted)] sm:px-5">
+            Seret ruang untuk melihatnya dari sudut lain.
+          </p>
+        </div>
+      </section>
+
+      <aside aria-label="Pengaturan penutup jendela" className="border-t border-[var(--line)] lg:border-l lg:border-t-0 lg:pl-8">
+        <div className="flex items-baseline justify-between gap-4 border-b border-[var(--line)] py-4">
+          <h2 className="text-base font-medium tracking-[-.025em]">Atur penutup jendela</h2>
+          <span className="shrink-0 text-xs text-[var(--muted)]">Perubahan langsung</span>
+        </div>
+
+        <fieldset className="border-b border-[var(--line)] py-6">
+          <legend className="text-sm font-semibold">Jenis</legend>
+          <div className="mt-3">
+            {types.map((item) => {
+              const selected = type === item;
+              return (
+                <button
+                  key={item}
+                  type="button"
+                  aria-pressed={selected}
+                  onClick={() => {
+                    setType(item);
+                    if (item !== 'Venetian blind' && finish === 'wood') setFinish('linen');
+                  }}
+                  className={`flex min-h-12 w-full items-center justify-between gap-4 border-b border-[var(--line)] px-2 text-left text-sm transition-colors hover:text-[var(--forest)] focus-visible:outline-offset-[-2px] ${selected ? 'bg-[var(--surface)] font-semibold text-[var(--forest)]' : 'text-[var(--muted)]'}`}
+                >
+                  <span>{item}</span>
+                  <span aria-hidden="true" className={`grid h-4 w-4 shrink-0 place-items-center rounded-full border ${selected ? 'border-[var(--forest)]' : 'border-[var(--line)]'}`}>
+                    {selected && <span className="h-2 w-2 rounded-full bg-[var(--forest)]" />}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </fieldset>
+
+        <fieldset className="border-b border-[var(--line)] py-6">
+          <legend className="text-sm font-semibold">Finishing</legend>
+          <div className="mt-3 grid grid-cols-2 gap-x-4">
+            {(Object.keys(finishes) as Finish[])
+              .filter((item) => item !== 'wood' || type === 'Venetian blind')
+              .map((item) => {
+                const selected = finish === item;
+                return (
+                  <button
+                    key={item}
+                    type="button"
+                    aria-pressed={selected}
+                    onClick={() => setFinish(item)}
+                    className={`flex min-h-11 items-center gap-2 border-b py-2 text-left text-sm transition-colors hover:text-[var(--forest)] focus-visible:outline-offset-[-2px] ${selected ? 'border-[var(--forest)] font-semibold text-[var(--forest)]' : 'border-[var(--line)] text-[var(--muted)]'}`}
+                  >
+                    <span aria-hidden="true" className="h-3.5 w-3.5 shrink-0 border border-black/10" style={{ backgroundColor: finishes[item].color }} />
+                    {finishes[item].label}
+                  </button>
+                );
+              })}
+          </div>
+          {type !== 'Venetian blind' && <p className="mt-3 text-xs leading-5 text-[var(--muted)]">Kayu oak tersedia untuk Venetian blind.</p>}
+        </fieldset>
+
+        <div className="py-6">
+          <div className="flex items-baseline justify-between gap-4">
+            <label htmlFor="curtain-openness" className="text-sm font-semibold">Bukaan</label>
+            <output htmlFor="curtain-openness" className="editorial text-2xl text-[var(--forest)]">
+              {Math.round(openness * 100)}%
+            </output>
+          </div>
+          <input
+            id="curtain-openness"
+            aria-valuetext={`${Math.round(openness * 100)}% terbuka`}
+            className="mt-5 block min-h-6 w-full cursor-pointer accent-[var(--forest)]"
+            min="0"
+            max="1"
+            step="0.05"
+            type="range"
+            value={openness}
+            onChange={(event) => setOpenness(Number(event.target.value))}
+          />
+          <div className="mt-1 flex justify-between text-xs text-[var(--muted)]">
+            <span>Lebih tertutup</span>
+            <span>Lebih terbuka</span>
+          </div>
+        </div>
+      </aside>
     </div>
-    <div className="grid gap-7 border-t border-black/10 px-5 py-6 sm:grid-cols-3 sm:px-8">
-      <div><p className="font-bold">Jenis</p><div className="mt-3 flex flex-col items-start gap-2">{types.map((item) => <button key={item} aria-pressed={type === item} onClick={() => { setType(item); if (item !== 'Venetian blind' && finish === 'wood') setFinish('linen'); }} className={type === item ? 'font-bold underline decoration-[var(--forest)] decoration-2 underline-offset-4' : 'text-[var(--muted)] transition-colors hover:text-[var(--forest)]'}>{item}</button>)}</div></div>
-      <div><p className="font-bold">Finishing</p><div className="mt-3 flex flex-col items-start gap-2">{(Object.keys(finishes) as Finish[]).filter((item) => item !== 'wood' || type === 'Venetian blind').map((item) => <button key={item} aria-pressed={finish === item} onClick={() => setFinish(item)} className={finish === item ? 'font-bold underline decoration-[var(--forest)] decoration-2 underline-offset-4' : 'text-[var(--muted)] transition-colors hover:text-[var(--forest)]'}>{finishes[item].label}</button>)}</div></div>
-      <label className="block"><span className="font-bold">Bukaan: {Math.round(openness * 100)}%</span><input aria-label="Atur bukaan" className="mt-4 block w-full accent-[var(--forest)]" min="0" max="1" step="0.05" type="range" value={openness} onChange={(event) => setOpenness(Number(event.target.value))} /><p className="mt-3 text-sm text-[var(--muted)]">Seret ruang untuk melihat dari sisi lain.</p></label>
-    </div>
-  </div>;
+  );
 }
