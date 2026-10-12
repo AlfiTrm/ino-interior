@@ -4,29 +4,24 @@ import { site } from '@/lib/site';
 
 export function Footer() {
   return (
-    <footer className="bg-[var(--ink)] py-12 text-white">
+    <footer className="bg-[var(--ink)] py-10 text-[var(--canvas)] sm:py-14">
       <Container>
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+        <div className="flex flex-col justify-between gap-10 md:flex-row md:items-start">
           <div>
-            <p className="text-lg font-extrabold tracking-[-0.05em]">INO Interior</p>
-            <p className="mt-4 max-w-sm text-sm leading-6 text-white/65">
-              Mulai percakapan untuk ruang yang perlu bekerja sebaik tampilnya.
+            <Link href="/" className="inline-flex min-h-11 items-baseline gap-3"><span className="text-5xl font-semibold tracking-[-.09em]">ino.</span><span className="text-sm">interior</span></Link>
+            <p className="mt-4 max-w-xs text-sm leading-6 text-[#c6cdc1]">
+              Untuk ruang yang nyaman dijalani, setiap hari.
             </p>
           </div>
-          <nav aria-label="Navigasi footer" className="grid content-start gap-3 text-sm font-bold">
+          <nav aria-label="Navigasi footer" className="grid grid-cols-2 gap-x-12 sm:flex sm:gap-8">
             {site.navigation.map((item) => (
-              <Link key={item.href} href={item.href} className="w-fit hover:text-white/65">
+              <Link key={item.href} href={item.href} className="flex min-h-11 items-center text-sm hover:underline hover:underline-offset-4">
                 {item.label}
               </Link>
             ))}
           </nav>
-          <div className="flex items-start md:justify-end">
-            <Link href="/kontak" className="bg-white px-5 py-3 text-sm font-bold text-[var(--ink)] transition-colors hover:bg-white/80">
-              Konsultasi proyek
-            </Link>
-          </div>
         </div>
-        <p className="mt-12 text-xs text-white/45">© {new Date().getFullYear()} INO Interior · Demo konsep</p>
+        <div className="mt-12 flex flex-col justify-between gap-3 border-t border-[#626e60] pt-6 text-xs leading-5 text-[#c6cdc1] sm:flex-row"><p>© {new Date().getFullYear()} INO Interior</p><p>Demo company profile. Seluruh proyek merupakan studi konsep.</p></div>
       </Container>
     </footer>
   );

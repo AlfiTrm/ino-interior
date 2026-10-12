@@ -1,5 +1,6 @@
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { ScrollMotion } from '@/components/layout/scroll-motion';
 
 export default function MainLayout({
   children,
@@ -7,10 +8,12 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Header />
-      <main id="content" className="flex-grow pt-20">{children}</main>
-      <Footer />
-    </div>
+    <ScrollMotion>
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main id="content" tabIndex={-1} className="flex-grow">{children}</main>
+        <Footer />
+      </div>
+    </ScrollMotion>
   );
 }

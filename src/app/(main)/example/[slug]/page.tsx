@@ -3,7 +3,7 @@ import { Container } from "@/features/shared/components";
 export default async function ExamplePage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   return (

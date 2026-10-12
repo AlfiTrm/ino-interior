@@ -50,3 +50,13 @@ src/
 ## License
 
 MIT
+
+## INO Interior demo
+
+This repository contains a frontend demo for an INO Interior company profile. Concept projects, locations, design briefs, and visual studies are fictional and must not be presented as a record of commissioned work. The project uses locally stored content and does not include a CMS or project database.
+
+Run `npm install`, then `npm run dev`. Run `npm run lint`, `npx tsc --noEmit`, and `npm run build` for local quality checks.
+
+The public reference photographs in `public/assets/concepts/` are listed with their photographer and source URL in `public/assets/concepts/sources.json`. They illustrate mood and material direction. Photographs in the same concept do not depict the same room. The five original illustrations in `public/assets/portfolio/` predate the current reference gallery. Their source history has not been supplied, so they remain labeled as demo visuals and should be replaced with licensed project imagery before any real business use.
+
+`NEXT_PUBLIC_SITE_URL` enables indexable metadata and the sitemap. Without it, the demo sends `noindex` metadata and disallows crawling. `NEXT_PUBLIC_WHATSAPP_NUMBER` is optional; configure it only after confirming an INO-owned number in international format. Without it, the contact form prepares a message locally and offers a copy action.

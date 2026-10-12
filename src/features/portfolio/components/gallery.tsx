@@ -1,12 +1,20 @@
 'use client';
 
-import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import { portfolioCategories, projects } from '@/data/interior';
+import { ProjectCard } from './project-card';
 
 export function PortfolioGallery() {
   const [category, setCategory] = useState<(typeof portfolioCategories)[number]>('Semua');
   const visible = category === 'Semua' ? projects : projects.filter((project) => project.category === category);
-  return <><div className="mb-10 flex flex-wrap gap-x-7 gap-y-4">{portfolioCategories.map((item) => <button key={item} aria-pressed={category === item} onClick={() => setCategory(item)} className={`relative pb-2 text-lg transition-colors after:absolute after:bottom-0 after:left-0 after:h-px after:bg-current after:transition-[width] after:duration-300 ${category === item ? 'font-bold text-[var(--ink)] after:w-full' : 'text-[var(--muted)] after:w-0 hover:text-[var(--forest)] hover:after:w-full'}`}>{item}</button>)}</div><div className="grid gap-8 md:grid-cols-2">{visible.map((project) => <Link key={project.slug} href={`/portofolio/${project.slug}`} className="group"><div className="relative aspect-[4/3] overflow-hidden"><Image src={project.image} alt={project.imageAlt} fill sizes="(min-width:768px) 50vw,100vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.02]" /></div><h2 className="mt-4 text-2xl font-extrabold tracking-[-.04em]">{project.title}</h2><p className="mt-1 text-sm text-[var(--muted)]">{project.category} · {project.location}</p></Link>)}</div></>;
+  return <>
+    <div role="group" aria-label="Filter kategori proyek" className="mb-10 flex flex-wrap gap-x-5 gap-y-2 border-b border-[var(--line)] sm:mb-14 sm:gap-x-10">
+      {portfolioCategories.map((item) => <button key={item} type="button" aria-pressed={category === item} aria-controls="project-gallery" onClick={() => setCategory(item)} className={'min-h-14 border-b-2 px-1 text-sm transition-colors sm:text-base ' + (category === item ? 'border-[var(--ink)] font-semibold text-[var(--ink)]' : 'border-transparent text-[var(--muted)] hover:text-[var(--forest)]')}>{item}</button>)}
+    </div>
+    <p role="status" aria-live="polite" aria-atomic="true" className="mb-7 text-sm text-[var(--muted)]">{visible.length} konsep{category === 'Semua' ? ' untuk beragam kebutuhan ruang' : ' ' + category.toLowerCase()}</p>
+    <div id="project-gallery" className="grid items-start gap-x-8 gap-y-12 md:grid-cols-2 lg:gap-x-12 lg:gap-y-16">
+      {visible.map((project, index) => <div key={project.slug} className={index % 2 ? 'md:pt-20' : ''}><ProjectCard project={project} tall={index % 4 === 0} /></div>)}
+    </div>
+    {visible.length === 0 && <div className="py-16"><h2 className="text-2xl">Belum ada konsep pada kategori ini.</h2><button type="button" className="text-link mt-4" onClick={() => setCategory('Semua')}>Lihat semua konsep</button></div>}
+  </>;
 }

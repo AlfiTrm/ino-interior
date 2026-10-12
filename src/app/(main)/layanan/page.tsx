@@ -1,11 +1,25 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Container } from '@/features/shared/components';
-import { services } from '@/data/interior';
+import { Consultation } from '@/features/shared/components/consultation';
+import { ProjectImage } from '@/features/portfolio/components/project-image';
+import { projects, services } from '@/data/interior';
 
-export const metadata: Metadata = { title: 'Layanan', description: 'Layanan INO untuk kantor, tempat usaha, penginapan, rumah, dan penutup jendela.' };
+export const metadata: Metadata = { title: 'Layanan', description: 'Konsep interior untuk kantor, hospitality, rumah, tirai, dan penutup jendela.' };
 
 export default function ServicesPage() {
-  return <><section className="pt-20 sm:pt-28"><Container><div className="grid items-end gap-10 lg:grid-cols-[1fr_.7fr]"><div><h1 className="text-5xl font-extrabold tracking-[-.065em] sm:text-7xl">Ada ruang yang mau dibenahi?</h1><p className="mt-7 max-w-xl text-base leading-7 text-[var(--muted)] sm:text-lg">Mulai dari kebutuhan sehari-harinya. Kami bantu membuat ruang yang nyaman dipakai dan enak dilihat.</p></div><Image src="/assets/illustrations/layanan.png" alt="Ilustrasi kantor, restoran, rumah, dan jendela bertirai" width={600} height={600} className="w-full max-w-sm justify-self-end" /></div></Container></section><section className="py-20 sm:py-28"><Container><h2 className="mb-10 text-3xl font-extrabold tracking-[-.05em] sm:text-4xl">Yang bisa kami bantu</h2><div className="divide-y divide-[var(--line)]">{services.map((service) => <article key={service.title} className="grid gap-5 py-9 sm:grid-cols-[minmax(14rem,.75fr)_1fr] sm:gap-10"><h3 className="text-2xl font-extrabold tracking-[-.045em] sm:text-3xl">{service.title}</h3><p className="max-w-xl leading-7 text-[var(--muted)]">{service.description}</p></article>)}</div></Container></section><section className="bg-[var(--forest)] py-20 text-white sm:py-28"><Container><div className="max-w-3xl"><h2 className="text-4xl font-extrabold tracking-[-.055em] sm:text-6xl">Ceritakan ruang yang ingin kamu benahi.</h2><p className="mt-6 max-w-xl leading-7 text-white/72">Kami mulai dari kebutuhanmu, bukan dari asumsi.</p><Link href="/kontak" className="mt-9 inline-block bg-white px-5 py-3 text-sm font-bold text-[var(--ink)] transition-colors hover:bg-white/80">Mulai ngobrol</Link></div></Container></section></>;
+  return <>
+    <section className="page-intro"><Container><div className="grid items-end gap-9 lg:grid-cols-[1.1fr_.9fr] lg:gap-20"><div><h1 className="display">Ruang berubah<br />seiring <span className="editorial text-[var(--forest)]">kebutuhan.</span></h1><p className="body-copy mt-7 max-w-xl">Mulai dari cara orang menggunakan ruang. Pilihan penataan, cahaya, material, dan tirai mengikuti aktivitasnya.</p></div><div className="lg:pb-2"><ProjectImage src="/assets/portfolio/kawasan-21.png" alt="Visual konsep showroom dengan ruang display dan area konsultasi" sizes="(min-width:1024px) 45vw,100vw" className="aspect-[4/3] max-h-[430px]" /></div></div></Container></section>
+    <section className="pb-16 sm:pb-24 lg:pb-32"><Container><h2 className="section-heading mb-8 sm:mb-12">Jenis ruang yang kami <span className="editorial">jelajahi.</span></h2>
+      <div>{services.map((service, index) => {
+        const project = projects.find((item) => item.slug === service.project)!;
+        return <article id={service.slug} key={service.slug} className="scroll-mt-28 grid gap-8 border-t border-[var(--line)] py-8 sm:py-10 lg:grid-cols-[.6fr_1.1fr_.8fr] lg:gap-12">
+          <div><p className="text-xs text-[var(--muted)]">{String(index + 1).padStart(2, '0')} / {service.category}</p><h3 className="mt-3 text-2xl font-medium tracking-[-.04em] sm:text-3xl">{service.name}</h3></div>
+          <div><p className="body-copy">{service.description}</p><ul className="mt-5 space-y-2 text-sm leading-6 text-[var(--muted)]">{service.scope.map((item) => <li key={item}>{item}</li>)}</ul><Link href={'/portofolio/' + service.project} className="text-link mt-4">Lihat studi {project.title}</Link></div>
+          <Link href={'/portofolio/' + service.project} aria-label={'Lihat konsep ' + project.title} className="group lg:mt-1"><ProjectImage src={project.image} alt={project.imageAlt} sizes="(min-width:1024px) 27vw,90vw" className="aspect-[5/3] lg:aspect-[4/3]" imageClassName="transition-transform duration-500 group-hover:scale-[1.02] motion-reduce:transform-none" /><p className="mt-2 text-xs text-[var(--muted)]">{project.title} / konsep demo</p></Link>
+        </article>;
+      })}</div>
+    </Container></section>
+    <Consultation title="Ceritakan ruang yang sedang Anda siapkan." />
+  </>;
 }

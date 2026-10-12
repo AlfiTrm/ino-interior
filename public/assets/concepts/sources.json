@@ -1,0 +1,407 @@
+[
+  {
+    "file": "/assets/concepts/apartemen-laras-1.webp",
+    "photoId": "gREquCUXQLI",
+    "source": "https://unsplash.com/photos/tidy-room-filled-with-furnitures-gREquCUXQLI",
+    "photographer": "deborah cortelazzi",
+    "description": "tidy room filled with furnitures",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/apartemen-laras-2.webp",
+    "photoId": "3wylDrjxH-E",
+    "source": "https://unsplash.com/photos/gray-fabric-loveseat-near-brown-wooden-table-3wylDrjxH-E",
+    "photographer": "Patrick Perkins",
+    "description": "gray fabric loveseat near brown wooden table",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/apartemen-laras-3.webp",
+    "photoId": "tHkJAMcO3QE",
+    "source": "https://unsplash.com/photos/beige-couch-and-armchair-tHkJAMcO3QE",
+    "photographer": "Francesca Tosolini",
+    "description": "beige couch and armchair",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/arca-house-1.webp",
+    "photoId": "poI7DelFiVA",
+    "source": "https://unsplash.com/photos/photo-of-pub-set-in-room-during-daytime-poI7DelFiVA",
+    "photographer": "Jason Leung",
+    "description": "photo of pub set in room during daytime",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/arca-house-2.webp",
+    "photoId": "e4B5AvA7Jqo",
+    "source": "https://unsplash.com/photos/a-room-with-tables-and-chairs-e4B5AvA7Jqo",
+    "photographer": "Glenov Brankovic",
+    "description": "a room with tables and chairs",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/arca-house-3.webp",
+    "photoId": "YYZU0Lo1uXE",
+    "source": "https://unsplash.com/photos/a-restaurant-with-a-view-of-the-water-YYZU0Lo1uXE",
+    "photographer": "Albert",
+    "description": "a restaurant with a view of the water",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/cahaya-timur-1.webp",
+    "photoId": "XM-miHibz64",
+    "source": "https://unsplash.com/photos/bedroom-with-bed-and-wall-art-XM-miHibz64",
+    "photographer": "Spacejoy",
+    "description": "A bedroom with a bed, a leather bench, and wall art in a sunlit room",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/cahaya-timur-2.webp",
+    "photoId": "hCU4fimRW-c",
+    "source": "https://unsplash.com/photos/bedroom-with-dark-grey-walls-hCU4fimRW-c",
+    "photographer": "Francesca Tosolini",
+    "description": "A bedroom with dark grey walls, a large bed, and a floral area rug",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/cahaya-timur-3.webp",
+    "photoId": "8qNuR1lIv_k",
+    "source": "https://unsplash.com/photos/white-bed-linen-on-bed-8qNuR1lIv_k",
+    "photographer": "Lotus Design N Print",
+    "description": "white bed linen on bed",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/dapur-teduh-1.webp",
+    "photoId": "RwXneIyqxAw",
+    "source": "https://unsplash.com/photos/modern-kitchen-with-grey-cabinets-RwXneIyqxAw",
+    "photographer": "Lotus Design N Print",
+    "description": "A modern kitchen with grey cabinets, a white island, and three pendant lights",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/dapur-teduh-2.webp",
+    "photoId": "G7sE2S4Lab4",
+    "source": "https://unsplash.com/photos/white-kitchen-room-set-G7sE2S4Lab4",
+    "photographer": "Aaron Huber",
+    "description": "white kitchen room set",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/dapur-teduh-3.webp",
+    "photoId": "oCw5_evbWyI",
+    "source": "https://unsplash.com/photos/modern-kitchen-with-marble-countertops-oCw5_evbWyI",
+    "photographer": "Lotus Design N Print",
+    "description": "Modern kitchen with grey cabinets, marble countertops, and light wood flooring",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/kamar-sore-1.webp",
+    "photoId": "WWYF8Lts8Ho",
+    "source": "https://unsplash.com/photos/a-bedroom-with-a-white-bed-and-a-wooden-headboard-WWYF8Lts8Ho",
+    "photographer": "Antonio Araujo",
+    "description": "A bedroom with a white bed and a wooden headboard",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/kamar-sore-2.webp",
+    "photoId": "jbwrqHBZPUY",
+    "source": "https://unsplash.com/photos/luxurious-hotel-room-with-two-beds-and-city-view-jbwrqHBZPUY",
+    "photographer": "Erik Mclean",
+    "description": "Luxurious hotel room with two beds and city view",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/kamar-sore-3.webp",
+    "photoId": "QAzk_ceFf-w",
+    "source": "https://unsplash.com/photos/a-bedroom-with-a-large-bed-and-a-fan-QAzk_ceFf-w",
+    "photographer": "Ahmed Rangel",
+    "description": "a bedroom with a large bed and a fan",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/kawasan-21-1.webp",
+    "photoId": "D3r0iKZ8YxE",
+    "source": "https://unsplash.com/photos/a-room-with-a-table-chairs-and-a-couch-D3r0iKZ8YxE",
+    "photographer": "Albero Furniture Bratislava",
+    "description": "a room with a table, chairs, and a couch",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/kawasan-21-2.webp",
+    "photoId": "17CoQYhIXEc",
+    "source": "https://unsplash.com/photos/sofas-and-armchairs-in-furniture-showroom-17CoQYhIXEc",
+    "photographer": "Sabhyata Sahu",
+    "description": "A furniture store showroom with multiple sofas and armchairs arranged on display shelves and the floor",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/kawasan-21-3.webp",
+    "photoId": "sJWyt9BHkB0",
+    "source": "https://unsplash.com/photos/a-living-room-filled-with-furniture-and-a-flat-screen-tv-sJWyt9BHkB0",
+    "photographer": "Albero Furniture Bratislava",
+    "description": "a living room filled with furniture and a flat screen tv",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/kedai-akar-1.webp",
+    "photoId": "Kwdp-0pok-I",
+    "source": "https://unsplash.com/photos/black-kitchen-appliance-on-kitchen-island-with-pendant-lights-Kwdp-0pok-I",
+    "photographer": "Nafinia Putra",
+    "description": "black kitchen appliance on kitchen island with pendant lights",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/kedai-akar-2.webp",
+    "photoId": "PK1pzUGQSjc",
+    "source": "https://unsplash.com/photos/empty-chairs-and-tables-inside-room-with-lights-turned-on-PK1pzUGQSjc",
+    "photographer": "Alexander Faé",
+    "description": "empty chairs and tables inside room with lights turned on",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/kedai-akar-3.webp",
+    "photoId": "vDhFB6TuKQM",
+    "source": "https://unsplash.com/photos/brown-wooden-table-and-chairs-vDhFB6TuKQM",
+    "photographer": "Sung Jin Cho",
+    "description": "brown wooden table and chairs",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/paviliun-senja-1.webp",
+    "photoId": "1CcryZiF2PA",
+    "source": "https://unsplash.com/photos/a-room-with-a-checkered-floor-and-a-bar-1CcryZiF2PA",
+    "photographer": "Steven Van Elk",
+    "description": "a room with a checkered floor and a bar",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/paviliun-senja-2.webp",
+    "photoId": "vi59jclwSko",
+    "source": "https://unsplash.com/photos/black-and-gray-chairs-and-table-near-glass-window-vi59jclwSko",
+    "photographer": "Trac Vu",
+    "description": "black and gray chairs and table near glass window",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/paviliun-senja-3.webp",
+    "photoId": "2xfGMbqwRfY",
+    "source": "https://unsplash.com/photos/a-lobby-with-a-fountain-in-the-middle-of-it-2xfGMbqwRfY",
+    "photographer": "D Z",
+    "description": "a lobby with a fountain in the middle of it",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/ruang-jeda-1.webp",
+    "photoId": "nvzvOPQW0gc",
+    "source": "https://unsplash.com/photos/white-wooden-table-near-brown-chair-nvzvOPQW0gc",
+    "photographer": "Bench Accounting",
+    "description": "white wooden table near brown chair",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/ruang-jeda-2.webp",
+    "photoId": "ysoj_iZxfd0",
+    "source": "https://unsplash.com/photos/a-desk-with-a-chair-and-a-laptop-on-it-ysoj_iZxfd0",
+    "photographer": "mahmoud azmy",
+    "description": "a desk with a chair and a laptop on it",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/ruang-jeda-3.webp",
+    "photoId": "Cf8ivcIDc6E",
+    "source": "https://unsplash.com/photos/a-conference-room-with-a-long-table-and-black-chairs-Cf8ivcIDc6E",
+    "photographer": "PerOla Hammar",
+    "description": "a conference room with a long table and black chairs",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/ruang-ranting-1.webp",
+    "photoId": "eHD8Y1Znfpk",
+    "source": "https://unsplash.com/photos/photo-of-dining-table-and-chairs-inside-room-eHD8Y1Znfpk",
+    "photographer": "Nastuh Abootalebi",
+    "description": "photo of dining table and chairs inside room",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/ruang-ranting-2.webp",
+    "photoId": "VWcPlbHglYc",
+    "source": "https://unsplash.com/photos/turned-off-laptop-computer-on-top-of-brown-wooden-table-VWcPlbHglYc",
+    "photographer": "Alesia Kazantceva",
+    "description": "turned off laptop computer on top of brown wooden table",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/ruang-ranting-3.webp",
+    "photoId": "yWwob8kwOCk",
+    "source": "https://unsplash.com/photos/hallway-between-glass-panel-doors-yWwob8kwOCk",
+    "photographer": "Nastuh Abootalebi",
+    "description": "hallway between glass-panel doors",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/rumah-sela-1.webp",
+    "photoId": "c0JoR_-2x3E",
+    "source": "https://unsplash.com/photos/a-living-room-filled-with-furniture-and-a-mirror-c0JoR_-2x3E",
+    "photographer": "Spacejoy",
+    "description": "a living room filled with furniture and a mirror",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/rumah-sela-2.webp",
+    "photoId": "DmOhItSo49k",
+    "source": "https://unsplash.com/photos/rectangular-brown-wooden-coffee-table-and-gray-3-seat-sofa-DmOhItSo49k",
+    "photographer": "Francesca Tosolini",
+    "description": "rectangular brown wooden coffee table and gray 3-seat sofa",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/rumah-sela-3.webp",
+    "photoId": "lLDh9JppH2c",
+    "source": "https://unsplash.com/photos/brown-couch-with-two-white-throw-pillows-lLDh9JppH2c",
+    "photographer": "Francesca Tosolini",
+    "description": "brown couch with two white throw pillows",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/sela-store-1.webp",
+    "photoId": "FRZr2OQIE-s",
+    "source": "https://unsplash.com/photos/a-store-filled-with-lots-of-clothes-and-lights-FRZr2OQIE-s",
+    "photographer": "Chris Viel",
+    "description": "a store filled with lots of clothes and lights",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/sela-store-2.webp",
+    "photoId": "Kaqi_fX8LfE",
+    "source": "https://unsplash.com/photos/clothing-racks-filled-with-colorful-garments-in-a-store-Kaqi_fX8LfE",
+    "photographer": "Farida Tania",
+    "description": "Clothing racks filled with colorful garments in a store",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/sela-store-3.webp",
+    "photoId": "2zMHUEXhQOc",
+    "source": "https://unsplash.com/photos/a-room-filled-with-lots-of-shelves-filled-with-books-2zMHUEXhQOc",
+    "photographer": "Denis Zelenykh",
+    "description": "A room filled with lots of shelves filled with books",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/serambi-lounge-1.webp",
+    "photoId": "afEV1IhjkLY",
+    "source": "https://unsplash.com/photos/a-room-with-a-lot-of-chairs-and-lights-afEV1IhjkLY",
+    "photographer": "Nereid Ndreu",
+    "description": "A room with a lot of chairs and lights",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/serambi-lounge-2.webp",
+    "photoId": "u6DZWOXLg38",
+    "source": "https://unsplash.com/photos/a-room-filled-with-furniture-and-a-checkered-floor-u6DZWOXLg38",
+    "photographer": "kt Leung",
+    "description": "a room filled with furniture and a checkered floor",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/serambi-lounge-3.webp",
+    "photoId": "MiDPt7D4WN8",
+    "source": "https://unsplash.com/photos/white-and-brown-living-room-MiDPt7D4WN8",
+    "photographer": "mark chaves",
+    "description": "white and brown living room",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/temu-studio-1.webp",
+    "photoId": "pYlBAu3de0w",
+    "source": "https://unsplash.com/photos/an-office-with-a-lot-of-desks-and-chairs-pYlBAu3de0w",
+    "photographer": "Bernd 📷 Dittrich",
+    "description": "an office with a lot of desks and chairs",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/temu-studio-2.webp",
+    "photoId": "p2u7eu00DCA",
+    "source": "https://unsplash.com/photos/a-room-with-a-desk-and-a-laptop-on-it-p2u7eu00DCA",
+    "photographer": "Don Kaveen",
+    "description": "a room with a desk and a laptop on it",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/temu-studio-3.webp",
+    "photoId": "fftMS_6sRHo",
+    "source": "https://unsplash.com/photos/an-office-with-a-plant-in-the-middle-of-the-room-fftMS_6sRHo",
+    "photographer": "Declan Sun",
+    "description": "an office with a plant in the middle of the room",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/teras-pagi-1.webp",
+    "photoId": "0DcJc1RexJk",
+    "source": "https://unsplash.com/photos/a-living-room-filled-with-furniture-and-a-flat-screen-tv-0DcJc1RexJk",
+    "photographer": "Joao Macedo",
+    "description": "a living room filled with furniture and a flat screen tv",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/teras-pagi-2.webp",
+    "photoId": "hlOpCML8twI",
+    "source": "https://unsplash.com/photos/sectional-sofa-near-coffee-table-and-window-hlOpCML8twI",
+    "photographer": "Christian Lambert",
+    "description": "sectional sofa near coffee table and window",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  },
+  {
+    "file": "/assets/concepts/teras-pagi-3.webp",
+    "photoId": "LL9V0iMpStM",
+    "source": "https://unsplash.com/photos/brown-and-grey-room-interior-LL9V0iMpStM",
+    "photographer": "Francesca Tosolini",
+    "description": "brown and grey room interior",
+    "license": "https://unsplash.com/license",
+    "role": "Referensi suasana untuk konsep demo, bukan dokumentasi pekerjaan INO."
+  }
+]
